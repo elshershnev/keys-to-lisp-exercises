@@ -5,21 +5,21 @@
 |#
 
 
-;; task (a) recursive
+;;; task (a) recursive
 (defun printdots (num)
     (if (= num 0)
         'done
         (progn (format t ".") (printdots (- num 1)))))
 
 
-;; task (a) iterative
+;;; task (a) iterative
 (defun printdots-iter (num)
     (do ((i 0 (+ i 1)))
         ((>= i num) 'done)
         (format t ".")))
 
 
-;; task (b) recursive
+;;; task (b) recursive
 (defun number-of-a (lst)
     (if (null lst)
         0
@@ -28,7 +28,7 @@
 			(number-of-a (cdr lst)))))
 
 
-;; task (b) iterative
+;;; task (b) iterative
 (defun number-of-a-iter (lst)
     (let ((num 0))
         (dolist
