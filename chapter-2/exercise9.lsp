@@ -36,4 +36,5 @@
 ;; test calls
 
 (summit1 '(Nil 1 2 Nil 3 4 Nil))
+
 (summit2 '(Nil 1 2 Nil 3 4 Nil))

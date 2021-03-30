@@ -36,4 +36,5 @@
 ;; test calls
 
 (new-union1 '(a b c) '(b a d))
+
 (new-union2 '(a b c) '(b a d))

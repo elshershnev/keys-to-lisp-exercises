@@ -3,6 +3,7 @@
 	a list as an argument and returns true if one of its elements is a list.
 |#
 
+
 (defun has-list (lst)
     (and
 		(not (null lst))

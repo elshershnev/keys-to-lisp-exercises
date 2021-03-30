@@ -20,6 +20,7 @@
 (defun showdots (lst)
     (showdots-helper lst 0))
 
+
 ;; test call
 
 (showdots '(a b c d e f))

@@ -16,6 +16,7 @@
 			(list (+ (car lst) number))
 			(pos+v1-helper (cdr lst) (+ number 1)))))
 
+
 (defun pos+v1 (lst)
 	(pos+v1-helper lst 0))
 
@@ -42,6 +43,7 @@
     (if (null lst)
         Nil
         (cons num (numlist (cdr lst) (+ num 1)))))
+
 
 (defun pos+v4 (lst)
     (mapcar '+ lst (numlist lst 0)))    

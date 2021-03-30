@@ -7,7 +7,7 @@
 |#
 
 
-;; returns specific colomn of array as a list
+;;; returns specific colomn of array as a list
 (defun get-column (arr column-number)
     (let ((rows (array-dimension arr 0)))
          (let ((vec nil))
@@ -25,5 +25,7 @@
 
 
 ;; test calls
+
 (quarter-turn #2A((a b c) (d e f) (g h i)))
+
 (quarter-turn #2A((a b) (c d)))

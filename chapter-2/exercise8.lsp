@@ -40,12 +40,17 @@
 ;; test calls
 
 (printdots 10)
+
 (printdots-iter 3)
 
 (number-of-a '(a a 1 2 3))
+
 (number-of-a '(1 a 2 a 3 a))
+
 (number-of-a '(1 2 3))
 
 (number-of-a-iter '(a a 1 2 3))
+
 (number-of-a-iter '(1 a 2 a 3 a))
+
 (number-of-a-iter '(1 2 3))
