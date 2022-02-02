@@ -59,7 +59,7 @@
 				((equal ch #\+) t)
 				((char= sym ch) t)))
 		;; key to exercise 6
-		(let 
+		(let
 			((str (elt pattern pos)))
 			(cond
 				((and
@@ -83,25 +83,25 @@
 		("."        (lambda (sym) t))
 		(#\.        (lambda (sym) t))
 									 )))
-		(dolist (item pairs)
-			(let ((pattern (car item))
-				  (func (eval (cadr item))))
-				(setf (gethash pattern ht) func)))
+	(dolist (item pairs)
+		(let ((pattern (car item))
+			  (func (eval (cadr item))))
+			(setf (gethash pattern ht) func)))
 
-(defun match2 (sym pattern pos)
-	(if (stringp pattern)
-		;; key to exercise 5 equals to key from match1
-		(let ((ch (char pattern pos)))
-			(cond
-				((equal ch #\+) t)
-				((char= sym ch) t)))
-		;; key to exercise 6
-		(let 
-			((str (elt pattern pos)))
-			(multiple-value-bind (predicate exists) (gethash str ht)
-				(if exists
-					(funcall predicate sym)
-					(equal str sym)))))))
+	(defun match2 (sym pattern pos)
+		(if (stringp pattern)
+			;; key to exercise 5 equals to key from match1
+			(let ((ch (char pattern pos)))
+				(cond
+					((equal ch #\+) t)
+					((char= sym ch) t)))
+			;; key to exercise 6
+			(let
+				((str (elt pattern pos)))
+				(multiple-value-bind (predicate exists) (gethash str ht)
+					(if exists
+						(funcall predicate sym)
+						(equal str sym)))))))
 
 (defun stream-subst (old new in out)
 	(let* ((pos 0)
@@ -150,8 +150,9 @@
 
 ;; Test calls.
 
-;; make sure that test1 have something for substitution
-;; example with a string pattern
+;; Make sure that test1 have something for substitution
+
+;; Example with a string pattern
 (file-subst " +h" " Z" "test.txt" "out.txt")
-;; example with a list pattern
+;; Example with a list pattern
 (file-subst '(#\a "\d" #\s) "QWE" "test.txt" "out.txt")
